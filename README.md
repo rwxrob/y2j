@@ -27,7 +27,7 @@ import (
 
 var Cmd = &bonzai.Cmd{
 	Name:     `cmds`,
-	Commands: []*bonzai.Cmd{help.Cmd, foo.Cmd},
+	Commands: []*bonzai.Cmd{help.Cmd, yaml2json.Cmd},
 }
 ```
 
