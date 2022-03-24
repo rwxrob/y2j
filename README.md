@@ -1,8 +1,6 @@
 # Convert YAML to JSON with Go 1.18+
 
-![Go Version](https://img.shields.io/github/go-mod/go-version/rwxrob/yaml2json)
 [![GoDoc](https://godoc.org/github.com/rwxrob/yaml2json?status.svg)](https://godoc.org/github.com/rwxrob/yaml2json)
-[![License](https://img.shields.io/badge/license-Apache2-brightgreen.svg)](LICENSE)
 
 ## Install
 
