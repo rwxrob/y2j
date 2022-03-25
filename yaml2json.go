@@ -26,9 +26,14 @@ var Cmd = &bonzai.Cmd{
 		The yaml2json command converts YAML (including references and
 		anchors) to compressed JSON (with a single training newline) using
 		the popular Go yaml.v2 package and its special <yaml:",inline"> tag.
-		If no filename is passed standard input is assumed. JSON encoding is
-		done using rwxrob/json instead of the "standard" encoding/json which
-		unnecessarily escapes HTML characters by default.
+		Because of this only YAML maps are supported as a base type (no
+		arrays). An array can easily be done as the value of a map key.
+
+		If no filename is passed standard input is assumed.
+
+		JSON encoding is done using rwxrob/json instead of the "standard"
+		encoding/json which unnecessarily escapes HTML characters by
+		default.
 
 		If h or help are passed as the first argument this help is assumed
 		(preventing the uncommon use of files named 'h' or 'help').

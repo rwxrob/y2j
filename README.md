@@ -34,3 +34,10 @@ var Cmd = &bonzai.Cmd{
 All documentation (like manual pages) has been embedded into the source
 code of the application. See the source or run the program with help to
 access it.
+
+## Design Considerations
+
+* **Nothing but maps.**
+
+  It is extremely rare to encounter a YAML array in the wild. It is
+  common, however, to have a map with a single array as it's value.

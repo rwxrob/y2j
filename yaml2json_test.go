@@ -5,9 +5,9 @@ import (
 	"testing"
 )
 
-func TestCmd_file(t *testing.T) {
+func TestCmd_file_Map(t *testing.T) {
 
-	out := `testdata/simple.json`
+	out := `testdata/map.json`
 
 	// redirect stdout temporarily
 	orig := os.Stdout
@@ -16,21 +16,10 @@ func TestCmd_file(t *testing.T) {
 	defer os.Remove(out)
 	os.Stdout = file
 
-	Cmd.Call(nil, `testdata/simple.yaml`)
+	Cmd.Call(nil, `testdata/map.yaml`)
 	want := `{"one":1,"other":"<thing>","some":"<thing>","true":true}` + "\n"
 	buf, _ := os.ReadFile(out)
 	if want != string(buf) {
 		t.Errorf("\nwant: %v\ngot:  %v\n", want, string(buf))
 	}
 }
-
-/*
-func TestCmd_error(t *testing.T) {
-	// capture the output
-	buf := new(bytes.Buffer)
-	log.SetFlags(0)
-	log.SetOutput(buf)
-	defer log.SetFlags(log.Flags())
-	defer log.SetOutput(os.Stderr)
-}
-*/
