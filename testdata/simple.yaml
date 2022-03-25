@@ -1,3 +1,4 @@
-some: thing
+some: &some <thing>
+other: *some
 one: 1
 true: true

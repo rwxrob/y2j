@@ -17,7 +17,7 @@ func TestCmd_file(t *testing.T) {
 	os.Stdout = file
 
 	Cmd.Call(nil, `testdata/simple.yaml`)
-	want := `{"one":1,"some":"thing","true":true}` + "\n"
+	want := `{"one":1,"other":"<thing>","some":"<thing>","true":true}` + "\n"
 	buf, _ := os.ReadFile(out)
 	if want != string(buf) {
 		t.Errorf("\nwant: %v\ngot:  %v\n", want, string(buf))

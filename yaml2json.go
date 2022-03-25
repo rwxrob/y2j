@@ -23,12 +23,12 @@ var Cmd = &bonzai.Cmd{
 	//Completer: comp.File, // comp.File bork at the moment
 
 	Description: `
-		The yaml2json command converts simple YAML to compressed JSON (with
-		a single training newline) using the popular Go yaml.v2 package and
-		its special <yaml:",inline"> tag. If no filename is passed standard
-		input is assumed. JSON encoding is done using rwxrob/json instead of
-		the "standard" encoding/json which unnecessarily escapes HTML
-		characters by default.
+		The yaml2json command converts YAML (including references and
+		anchors) to compressed JSON (with a single training newline) using
+		the popular Go yaml.v2 package and its special <yaml:",inline"> tag.
+		If no filename is passed standard input is assumed. JSON encoding is
+		done using rwxrob/json instead of the "standard" encoding/json which
+		unnecessarily escapes HTML characters by default.
 
 		If h or help are passed as the first argument this help is assumed
 		(preventing the uncommon use of files named 'h' or 'help').
@@ -40,21 +40,21 @@ var Cmd = &bonzai.Cmd{
 		`,
 
 	Call: func(_ *bonzai.Cmd, args ...string) error {
-		if len(args) == 0 {
-			return fmt.Errorf("missing file argument (or - for stdin)")
-		}
 		var buf []byte
 		var err error
-		if args[0] == "-" {
+
+		if len(args) == 0 {
 			buf, err = io.ReadAll(os.Stdin)
 			if err != nil {
 				return err
 			}
+		} else {
+			buf, err = os.ReadFile(args[0])
+			if err != nil {
+				return err
+			}
 		}
-		buf, err = os.ReadFile(args[0])
-		if err != nil {
-			return err
-		}
+
 		s := struct {
 			O map[string]any `yaml:",inline"`
 		}{}
