@@ -4,13 +4,14 @@ go 1.18
 
 require (
 	github.com/rwxrob/bonzai v0.0.19
+	github.com/rwxrob/json v0.4.1
 	gopkg.in/yaml.v2 v2.4.0
+	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
 )
 
 require (
 	github.com/rwxrob/fn v0.1.0 // indirect
 	github.com/rwxrob/fs v0.2.0 // indirect
-	github.com/rwxrob/json v0.4.1 // indirect
 	github.com/rwxrob/structs v0.5.0 // indirect
 	github.com/rwxrob/term v0.1.2 // indirect
 	github.com/rwxrob/to v0.1.1 // indirect

@@ -8,7 +8,7 @@ import (
 	"github.com/rwxrob/bonzai"
 	"github.com/rwxrob/bonzai/inc/help"
 	"github.com/rwxrob/json"
-	"gopkg.in/yaml.v2"
+	"gopkg.in/yaml.v3"
 )
 
 var Cmd = &bonzai.Cmd{
@@ -25,7 +25,7 @@ var Cmd = &bonzai.Cmd{
 	Description: `
 		The yaml2json command converts YAML (including references and
 		anchors) to compressed JSON (with a single training newline) using
-		the popular Go yaml.v2 package and its special <yaml:",inline"> tag.
+		the popular Go yaml.v3 package and its special <yaml:",inline"> tag.
 		Because of this only YAML maps are supported as a base type (no
 		arrays). An array can easily be done as the value of a map key.
 
