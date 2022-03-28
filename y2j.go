@@ -1,4 +1,4 @@
-package yaml2json
+package y2j
 
 import (
 	"fmt"
@@ -7,12 +7,12 @@ import (
 
 	"github.com/rwxrob/bonzai"
 	"github.com/rwxrob/bonzai/inc/help"
-	yaml2json "github.com/rwxrob/yaml2json/pkg"
+	y2j "github.com/rwxrob/y2j/pkg"
 )
 
 var Cmd = &bonzai.Cmd{
 
-	Name:      `yaml2json`,
+	Name:      `y2j`,
 	Summary:   `convert basic YAML to JSON`,
 	Usage:     `[h|help|<file>]`,
 	Version:   `v0.0.1`,
@@ -22,7 +22,7 @@ var Cmd = &bonzai.Cmd{
 	//Completer: comp.File, // comp.File bork at the moment
 
 	Description: `
-		The yaml2json command converts YAML (including references and
+		The y2j command converts YAML (including references and
 		anchors) to compressed JSON (with a single training newline) using
 		the popular Go yaml.v3 package and its special <yaml:",inline"> tag.
 		Because of this only YAML maps are supported as a base type (no
@@ -37,7 +37,7 @@ var Cmd = &bonzai.Cmd{
 		If h or help are passed as the first argument this help is assumed
 		(preventing the uncommon use of files named 'h' or 'help').
 
-		The intent of yaml2json is to get YAML into a form quickly for using
+		The intent of y2j is to get YAML into a form quickly for using
 		with the more powerful jq command line utility until an equally
 		powerful yaml alternative is available.
 
@@ -59,7 +59,7 @@ var Cmd = &bonzai.Cmd{
 			}
 		}
 
-		buf, err = yaml2json.Convert(buf)
+		buf, err = y2j.Convert(buf)
 		if err != nil {
 			return err
 		}

@@ -1,4 +1,4 @@
-module github.com/rwxrob/yaml2json
+module github.com/rwxrob/y2j
 
 go 1.18
 

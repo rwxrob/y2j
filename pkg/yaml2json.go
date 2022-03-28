@@ -1,4 +1,4 @@
-package yaml2json
+package y2j
 
 import (
 	"github.com/rwxrob/json"

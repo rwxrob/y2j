@@ -1,6 +1,6 @@
 # Convert YAML to JSON with Go 1.18+
 
-[![GoDoc](https://godoc.org/github.com/rwxrob/yaml2json?status.svg)](https://godoc.org/github.com/rwxrob/yaml2json)
+[![GoDoc](https://godoc.org/github.com/rwxrob/y2j?status.svg)](https://godoc.org/github.com/rwxrob/y2j)
 
 ## Install
 
@@ -10,7 +10,7 @@ a Bonzai command tree.
 Standalone
 
 ```
-go install github.com/rwxrob/yaml2json/yaml2json@latest
+go install github.com/rwxrob/y2j/y2j@latest
 ```
 
 Composed
@@ -20,12 +20,12 @@ package cmds
 
 import (
 	"github.com/rwxrob/bonzai"
-	"github.com/rwxrob/yaml2json"
+	"github.com/rwxrob/y2j"
 )
 
 var Cmd = &bonzai.Cmd{
 	Name:     `cmds`,
-	Commands: []*bonzai.Cmd{help.Cmd, yaml2json.Cmd},
+	Commands: []*bonzai.Cmd{help.Cmd, y2j.Cmd},
 }
 ```
 
