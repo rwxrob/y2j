@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/rwxrob/bonzai"
+	"github.com/rwxrob/bonzai/comp"
 	"github.com/rwxrob/bonzai/inc/help"
 	y2j "github.com/rwxrob/y2j/pkg"
 )
@@ -15,6 +16,7 @@ var Cmd = &bonzai.Cmd{
 	Name:      `y2j`,
 	Summary:   `convert basic YAML to JSON`,
 	Usage:     `[h|help|<file>]`,
+	Completer: comp.File,
 	Version:   `v0.0.1`,
 	Copyright: `Copyright 2021 Robert S Muhlestein`,
 	License:   `Apache-2.0`,
