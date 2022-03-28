@@ -7,8 +7,7 @@ import (
 
 	"github.com/rwxrob/bonzai"
 	"github.com/rwxrob/bonzai/inc/help"
-	"github.com/rwxrob/json"
-	"gopkg.in/yaml.v3"
+	yaml2json "github.com/rwxrob/yaml2json/pkg"
 )
 
 var Cmd = &bonzai.Cmd{
@@ -60,7 +59,7 @@ var Cmd = &bonzai.Cmd{
 			}
 		}
 
-		buf, err = Convert(buf)
+		buf, err = yaml2json.Convert(buf)
 		if err != nil {
 			return err
 		}
@@ -68,21 +67,4 @@ var Cmd = &bonzai.Cmd{
 
 		return nil
 	},
-}
-
-// Convert converts YAML map data into JSON data. Only maps will work.
-func Convert(buf []byte) ([]byte, error) {
-	var err error
-	s := struct {
-		O map[string]any `yaml:",inline"`
-	}{}
-	err = yaml.Unmarshal(buf, &s)
-	if err != nil {
-		return nil, err
-	}
-	buf, err = json.Marshal(s.O)
-	if err != nil {
-		return nil, err
-	}
-	return buf, nil
 }
