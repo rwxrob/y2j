@@ -1,4 +1,4 @@
-# Convert YAML to JSON with Go 1.18+
+# 🌳 Go YAML to JSON Converter
 
 [![GoDoc](https://godoc.org/github.com/rwxrob/y2j?status.svg)](https://godoc.org/github.com/rwxrob/y2j)
 
