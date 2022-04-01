@@ -5,13 +5,13 @@ import (
 	"io"
 	"os"
 
-	"github.com/rwxrob/bonzai"
+	Z "github.com/rwxrob/bonzai"
 	"github.com/rwxrob/bonzai/comp"
 	"github.com/rwxrob/bonzai/inc/help"
 	y2j "github.com/rwxrob/y2j/pkg"
 )
 
-var Cmd = &bonzai.Cmd{
+var Cmd = &Z.Cmd{
 
 	Name:      `y2j`,
 	Summary:   `convert basic YAML to JSON`,
@@ -20,7 +20,7 @@ var Cmd = &bonzai.Cmd{
 	Version:   `v0.0.1`,
 	Copyright: `Copyright 2021 Robert S Muhlestein`,
 	License:   `Apache-2.0`,
-	Commands:  []*bonzai.Cmd{help.Cmd},
+	Commands:  []*Z.Cmd{help.Cmd},
 	//Completer: comp.File, // comp.File bork at the moment
 
 	Description: `
@@ -45,7 +45,7 @@ var Cmd = &bonzai.Cmd{
 
 		`,
 
-	Call: func(_ *bonzai.Cmd, args ...string) error {
+	Call: func(_ *Z.Cmd, args ...string) error {
 		var buf []byte
 		var err error
 
