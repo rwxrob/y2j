@@ -5,9 +5,9 @@ import (
 	"io"
 	"os"
 
-	Z "github.com/rwxrob/bonzai"
 	"github.com/rwxrob/bonzai/comp"
-	"github.com/rwxrob/bonzai/inc/help"
+	"github.com/rwxrob/bonzai/help"
+	Z "github.com/rwxrob/bonzai/z"
 	y2j "github.com/rwxrob/y2j/pkg"
 )
 
