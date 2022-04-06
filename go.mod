@@ -3,7 +3,7 @@ module github.com/rwxrob/y2j
 go 1.18
 
 require (
-	github.com/rwxrob/bonzai v0.1.0
+	github.com/rwxrob/bonzai v0.1.2
 	github.com/rwxrob/json v0.5.1
 	gopkg.in/yaml.v2 v2.4.0
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
