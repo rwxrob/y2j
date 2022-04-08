@@ -6,8 +6,8 @@ import (
 	"os"
 
 	"github.com/rwxrob/bonzai/comp"
-	"github.com/rwxrob/bonzai/help"
 	Z "github.com/rwxrob/bonzai/z"
+	"github.com/rwxrob/help"
 	y2j "github.com/rwxrob/y2j/pkg"
 )
 
@@ -17,7 +17,7 @@ var Cmd = &Z.Cmd{
 	Summary:   `convert basic YAML to JSON`,
 	Usage:     `[h|help|<file>]`,
 	Completer: comp.File,
-	Version:   `v0.0.1`,
+	Version:   `v0.3.5`,
 	Copyright: `Copyright 2021 Robert S Muhlestein`,
 	License:   `Apache-2.0`,
 	Commands:  []*Z.Cmd{help.Cmd},
