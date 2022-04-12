@@ -5,8 +5,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/rwxrob/bonzai/comp"
 	Z "github.com/rwxrob/bonzai/z"
+	"github.com/rwxrob/compfile"
 	"github.com/rwxrob/help"
 	y2j "github.com/rwxrob/y2j/pkg"
 )
@@ -16,12 +16,11 @@ var Cmd = &Z.Cmd{
 	Name:      `y2j`,
 	Summary:   `convert basic YAML to JSON`,
 	Usage:     `[h|help|<file>]`,
-	Completer: comp.File,
+	Comp:      compfile.New(),
 	Version:   `v0.3.5`,
 	Copyright: `Copyright 2021 Robert S Muhlestein`,
 	License:   `Apache-2.0`,
 	Commands:  []*Z.Cmd{help.Cmd},
-	//Completer: comp.File, // comp.File bork at the moment
 
 	Description: `
 		The y2j command converts YAML (including references and
