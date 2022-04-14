@@ -15,9 +15,9 @@ var Cmd = &Z.Cmd{
 
 	Name:      `y2j`,
 	Summary:   `convert basic YAML to JSON`,
-	Usage:     `[h|help|<file>]`,
+	Usage:     `[help|<file>]`,
 	Comp:      compfile.New(),
-	Version:   `v0.3.6`,
+	Version:   `v0.4.0`,
 	Copyright: `Copyright 2021 Robert S Muhlestein`,
 	License:   `Apache-2.0`,
 	Commands:  []*Z.Cmd{help.Cmd},

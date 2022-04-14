@@ -1,5 +1,5 @@
 package main
 
-import "github.com/rwxrob/yaml2json"
+import "github.com/rwxrob/y2j"
 
-func main() { yaml2json.Cmd.Run() }
+func main() { y2j.Cmd.Run() }

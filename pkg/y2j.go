@@ -1,7 +1,7 @@
 package y2j
 
 import (
-	"github.com/rwxrob/json"
+	json "github.com/rwxrob/json/pkg"
 	"gopkg.in/yaml.v3"
 )
 
