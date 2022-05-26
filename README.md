@@ -10,7 +10,7 @@ a Bonzai command tree.
 Standalone
 
 ```
-go install github.com/rwxrob/y2j/y2j@latest
+go install github.com/rwxrob/y2j/cmd/y2j@latest
 ```
 
 Composed
@@ -19,7 +19,7 @@ Composed
 package cmds
 
 import (
-	Z "github.com/rwxrob/bonzai"
+	Z "github.com/rwxrob/bonzai/z"
 	"github.com/rwxrob/y2j"
 )
 
